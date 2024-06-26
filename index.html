@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle Financeiro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+      <h1 class="text-center">FinanceX - Sistema de Controle Financeiro</h1>
+
+        <div class="row">
+            <!-- Fontes de Receita -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Fontes de Receita
+                    </div>
+                    <div class="card-body">
+                        <form id="formReceita">
+                            <div class="form-group">
+                                <label for="receitaDescricao">Descrição</label>
+                                <input type="text" class="form-control" id="receitaDescricao" placeholder="Ex: Salário">
+                            </div>
+                            <div class="form-group">
+                                <label for="receitaValor">Valor</label>
+                                <input type="number" class="form-control" id="receitaValor" placeholder="Ex: 5000">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Adicionar Receita</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gastos -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Gastos
+                    </div>
+                    <div class="card-body">
+                        <form id="formGasto">
+                            <div class="form-group">
+                                <label for="gastoDescricao">Descrição</label>
+                                <input type="text" class="form-control" id="gastoDescricao" placeholder="Ex: Aluguel">
+                            </div>
+                            <div class="form-group">
+                                <label for="gastoValor">Valor</label>
+                                <input type="number" class="form-control" id="gastoValor" placeholder="Ex: 1200">
+                            </div>
+                            <button type="submit" class="btn btn-danger">Adicionar Gasto</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Dívidas -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Dívidas
+                    </div>
+                    <div class="card-body">
+                        <form id="formDivida">
+                            <div class="form-group">
+                                <label for="dividaDescricao">Descrição</label>
+                                <input type="text" class="form-control" id="dividaDescricao" placeholder="Ex: Empréstimo">
+                            </div>
+                            <div class="form-group">
+                                <label for="dividaValor">Valor</label>
+                                <input type="number" class="form-control" id="dividaValor" placeholder="Ex: 3000">
+                            </div>
+                            <button type="submit" class="btn btn-warning">Adicionar Dívida</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investimentos -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Investimentos
+                    </div>
+                    <div class="card-body">
+                        <form id="formInvestimento">
+                            <div class="form-group">
+                                <label for="investimentoDescricao">Descrição</label>
+                                <input type="text" class="form-control" id="investimentoDescricao" placeholder="Ex: Ações">
+                            </div>
+                            <div class="form-group">
+                                <label for="investimentoValor">Valor</label>
+                                <input type="number" class="form-control" id="investimentoValor" placeholder="Ex: 2000">
+                            </div>
+                            <button type="submit" class="btn btn-success">Adicionar Investimento</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Gráfico -->
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Gráfico de Controle Financeiro
+                    </div>
+                    <div class="card-body">
+                        <canvas id="graficoFinanceiro"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
